@@ -48,7 +48,7 @@ MaterialPrototype.construct = function(options) {
 
     this.uniforms = options.uniforms || {};
 
-    this.cullFace = isNullOrUndefined(options.cullFace) ? enums.cullFace.FRONT : options.cullFace;
+    this.cullFace = isNullOrUndefined(options.cullFace) ? enums.cullFace.BACK : options.cullFace;
     this.blending = isNullOrUndefined(options.blending) ? enums.blending.DEFAULT : options.blending;
 
     this.wireframe = isNullOrUndefined(options.wireframe) ? false : !!options.wireframe;
