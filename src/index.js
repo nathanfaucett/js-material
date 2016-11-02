@@ -32,9 +32,9 @@ function Material() {
 JSONAsset.extend(Material, "odin.Material");
 MaterialPrototype = Material.prototype;
 
-MaterialPrototype.construct = function(name, src, options) {
+MaterialPrototype.construct = function(options) {
 
-    JSONAssetPrototype.construct.call(this, name, src);
+    JSONAssetPrototype.construct.call(this, options);
 
     options = options || {};
 
