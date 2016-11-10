@@ -32,9 +32,9 @@
     "zuul": "^3.11.0"
   },
   "dependencies": {
-    "@nathanfaucett/assets": "git@github.com:nathanfaucett/js-assets.git",
-    "@nathanfaucett/webgl_context": "git@github.com:nathanfaucett/js-webgl_context.git",
-    "@nathanfaucett/shader": "git@github.com:nathanfaucett/js-shader.git",
+    "@nathanfaucett/assets": "git://github.com/nathanfaucett/js-assets.git",
+    "@nathanfaucett/webgl_context": "git://github.com/nathanfaucett/js-webgl_context.git",
+    "@nathanfaucett/shader": "git://github.com/nathanfaucett/js-shader.git",
     "@nathanfaucett/is_null_or_undefined": "^0.0.1"
   }
 }
