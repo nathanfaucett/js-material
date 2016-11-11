@@ -77,3 +77,41 @@ MaterialPrototype.destructor = function() {
 
     return this;
 };
+
+MaterialPrototype.toJSON = function(json) {
+
+    json = JSONAssetPrototype.toJSON.call(this, json);
+
+    json.cullFace = this.cullFace;
+    json.blending = this.blending;
+
+    json.wireframe = this.wireframe;
+    json.wireframeLineWidth = this.wireframeLineWidth;
+
+    json.receiveShadow = this.receiveShadow;
+    json.castShadow = this.castShadow;
+
+    json.uniforms = this.uniforms;
+
+    return json;
+};
+
+MaterialPrototype.fromJSON = function(json) {
+
+    JSONAssetPrototype.fromJSON.call(this, json);
+
+    this.shader = this.assets ? this.assets.get(json.shader) : json.shader;
+
+    this.cullFace = json.cullFace;
+    this.blending = json.blending;
+
+    this.wireframe = json.wireframe;
+    this.wireframeLineWidth = json.wireframeLineWidth;
+
+    this.receiveShadow = json.receiveShadow;
+    this.castShadow = json.castShadow;
+
+    this.uniforms = json.uniforms;
+
+    return this;
+};
